@@ -37,7 +37,7 @@ const addPost = async (title, user, date, duration, country, location, descripti
       
       let fileUrl = ''
       if (image) {
-        fileUrl = `https://cozyplace.herokuapp.com/app/files/${image.filename}`
+        fileUrl = `https://cozyplace-remaster.herokuapp.com/app/files/${image.filename}`
       }
       
 
@@ -78,7 +78,7 @@ const updatePost = (id, title, user, date, duration, country, location, descript
 
     let fileUrl = ''
     if (image) {
-      fileUrl = `https://cozyplace.herokuapp.com/app/files/${image.filename}`
+      fileUrl = `https://cozyplace-remaster.herokuapp.com/app/files/${image.filename}`
     }
 
     const post = {
