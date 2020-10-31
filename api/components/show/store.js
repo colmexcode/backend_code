@@ -43,10 +43,10 @@ const getLocation = async (location) => {
   const getLocationTop = async () => {
     //const colombia = await Model.find({ location: {$exists:true}, country: "colombia", image: {$exists:true}}, {location:1, country:1, image:1}).limit(2)
 
-    const mexico1 = await Model.findOne({ _id: "5f97d475788d9c3cb4e73bc9" }, {location:1, country:1, image:1})
-    const mexico2 = await Model.findOne({ _id: "5f97d38f788d9c3cb4e73bc8" }, {location:1, country:1, image:1})
-    const colombia1 = await Model.findOne({ _id: "5f97d20f788d9c3cb4e73bc6" }, {location:1, country:1, image:1})
-    const colombia2 = await Model.findOne({ _id: "5f97d2dd788d9c3cb4e73bc7" }, {location:1, country:1, image:1})
+    const mexico1 = await Model.findOne({ _id: "5f9d3ab069fd000017abcd36" }, {location:1, country:1, image:1})
+    const mexico2 = await Model.findOne({ _id: "5f9d3be169fd000017abcd38" }, {location:1, country:1, image:1})
+    const colombia1 = await Model.findOne({ _id: "5f9d3d3a69fd000017abcd39" }, {location:1, country:1, image:1})
+    const colombia2 = await Model.findOne({ _id: "5f9d3d5369fd000017abcd3a" }, {location:1, country:1, image:1})
 
     return  {
       mexico1,
