@@ -33,7 +33,7 @@ app.use(cors())
 // [routes]
 app.use('/api/user', user); // llamando a ruta, todo lo que venga de esa ruta va a user
 app.use('/api/post', post); // llamando a ruta, todo lo que venga de esa ruta va a post
-app.use('/api/show', show); // llamando a ruta, todo lo que venga de esa ruta va a show
+app.use('/api/show', show); // llamando a ruta, todo lo que venga de esa ruta va a show.
 app.use('/api/tag', tag); // llamando a ruta, todo lo que venga de esa ruta va a show
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
