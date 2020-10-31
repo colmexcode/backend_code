@@ -37,7 +37,7 @@ const addUser = async (fullname, email, username, password, description, image) 
 
   let fileUrl = ''
   if (image) {
-    fileUrl = `https://cozyplace-remaster.herokuapp.com/app/files/${image.filename}`
+    fileUrl = `https://cozyplace.herokuapp.com/app/files/${image.filename}`
   }
 
   const emailExists = await storage.getOneByFilter({ email })
