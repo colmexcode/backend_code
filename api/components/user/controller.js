@@ -30,14 +30,14 @@ const auth = require('../../../auth/index')
 // 1.1 [addUser] - CREATE USER
 //------------------------------------------------------------------------------------------------
 
-const addUser = async (fullname, email, username, password, description, image) => {
+const addUser = async (fullname, email, username, password, description, image, resultImage) => {
   if (!fullname || !email || !username || !password) {
     throw new Error('Missing data')
   }
 
   let fileUrl = ''
   if (image) {
-    fileUrl = `https://cozyplace.herokuapp.com/app/files/${image.filename}`
+    fileUrl = resultImage.url
   }
 
   const emailExists = await storage.getOneByFilter({ email })
