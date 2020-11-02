@@ -63,7 +63,7 @@ router.post('/create', checkAuth, upload.single('image'), async (req, res) => {
     try {
       const { title, user, date, duration, country, location, description, rating, tags} = req.body
       //const resultImage = await cloudinary.v2.uploader.upload(req.file.path)
-      const post = await controller.addPost(title, user, date, duration, country, location, description, rating, tags, req.file, resultImage)
+      const post = await controller.addPost(title, user, date, duration, country, location, description, rating, tags, req.file)
   
       response.success(req, res, post, 200)
     } catch (error) {
