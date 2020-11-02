@@ -27,7 +27,7 @@ const store = require('./store')
 // 1.1 [addPost] - CREATE POST
 //------------------------------------------------------------------------------------------------
 
-const addPost = async (title, user, date, duration, country, location, description, rating, tags, image, resultImage) => {
+const addPost = async (title, user, date, duration, country, location, description, rating, tags, image) => {
     try {
       if (!title || !user || !date || !duration || !country || !location || !description || !rating || !tags) {
         console.log('[CONTROLLER] invalid data form.')
@@ -37,7 +37,7 @@ const addPost = async (title, user, date, duration, country, location, descripti
       
       let fileUrl = ''
       if (image) {
-        fileUrl = resultImage.url
+        fileUrl = `https://cozyplace.herokuapp.com/app/files/${image.filename}`
       }
       
 

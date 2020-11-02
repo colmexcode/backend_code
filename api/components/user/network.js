@@ -33,15 +33,15 @@ const controller = require('./controller');
 const router = express.Router();
 const multer = require('multer')
 const path = require('path')
-const cloudinary = require('cloudinary')
+//const cloudinary = require('cloudinary')
 const checkAuth = require('../../../auth/check-auth');
-
+/*
 cloudinary.config({
   cloud_name: 'cozyplace',
   api_key: '837153421924575',
   api_secret: 'EVifAhGls69qpUOfL8J3tetVm4Q'
 })
-
+*/
 //------------------------------------------------------------------------------------------------
 // [Multer configuration]
 //------------------------------------------------------------------------------------------------
@@ -63,8 +63,8 @@ const upload = multer({ storage: storage })
 router.post('/signup', upload.single('image'), async (req, res) => {
     const { fullname, email, username, password, description } = req.body
     try {
-      const resultImage = await cloudinary.v2.uploader.upload(req.file.path)
-      const user = await controller.add(fullname, email, username, password, description, req.file, resultImage)
+      //const resultImage = await cloudinary.v2.uploader.upload(req.file.path)
+      const user = await controller.add(fullname, email, username, password, description, req.file)
       response.success(req, res, user, 201)
     } catch (error) {
       response.error(req, res, error.message, 400, error)
