@@ -1,3 +1,9 @@
+///// START CODE REVIEW COMMENT
+
+// The comments have to be in English 
+
+///// END CODE REVIEW COMMENT
+
 /*
 
 Index.js, is in charge of receiving the requests, it is the server,
